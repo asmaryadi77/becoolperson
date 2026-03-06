@@ -5,140 +5,777 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Be COOL Person - Rumus Sederhana Untuk Hidup Lebih Tenang</title>
     <style>
-        body {
-            background-color: #000000;
-            color: #d1d1d1;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        * {
             margin: 0;
-            line-height: 1.8;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .wrapper {
-            max-width: 600px;
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 800px;
             margin: 0 auto;
-            padding: 80px 25px;
+            padding: 20px;
         }
-        .kicker {
-            color: #f39c12;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 0.8rem;
-            display: block;
-            margin-bottom: 10px;
-        }
-        h1 {
-            color: #ffffff;
-            font-size: 2.8rem;
-            line-height: 1.1;
-            margin: 0 0 30px 0;
-        }
-        .intro-italic {
-            font-style: italic;
-            color: #888;
-            font-size: 1.1rem;
+
+        /* HEADER / NAVIGATION */
+        header {
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 153, 0, 0.2);
             margin-bottom: 40px;
         }
-        /* Style Tambahan buat Cover */
-        .cover-container {
-            text-align: center;
-            margin: 40px 0;
+
+        .logo {
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: #ff9900;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 10px;
         }
-        .cover-container img {
+
+        /* HERO SECTION */
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero .tagline {
+            font-size: 1.1em;
+            color: #b0b0b0;
+            margin-bottom: 30px;
+            font-style: italic;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-image {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .hero-image img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(243, 156, 18, 0.2); /* Bayangan tipis warna orange */
-            border: 1px solid #222;
         }
-        .quote-card {
-            background: #111;
-            border-left: 4px solid #f39c12;
+
+        /* PAIN POINT SECTION */
+        .pain-point {
+            background: rgba(255, 153, 0, 0.05);
+            border-left: 4px solid #ff9900;
             padding: 25px;
-            margin: 40px 0;
-            border-radius: 0 10px 10px 0;
-        }
-        .quote-card p {
-            color: #ffffff;
-            font-weight: 600;
-            margin: 0;
-            font-size: 1.1rem;
-        }
-        strong { color: #f39c12; }
-        .feature-list {
-            list-style: none;
-            padding: 0;
-            margin: 40px 0;
-        }
-        .feature-list li {
-            padding: 15px 0;
-            border-bottom: 1px solid #222;
-        }
-        .feature-list li:last-child { border: none; }
-        .cta-btn {
-            display: block;
-            background: #f39c12;
-            color: #000 !important;
-            text-align: center;
-            padding: 22px;
-            text-decoration: none;
-            font-weight: 900;
-            font-size: 1.3rem;
+            margin-bottom: 40px;
             border-radius: 5px;
-            margin-top: 50px;
-            transition: 0.3s;
+            backdrop-filter: blur(10px);
         }
-        .cta-btn:hover {
-            background: #ffffff;
+
+        .pain-point p {
+            font-size: 1.05em;
+            color: #d0d0d0;
+            margin-bottom: 15px;
+        }
+
+        .pain-point strong {
+            color: #ff9900;
+        }
+
+        /* PRIMARY CTA */
+        .cta-primary {
+            background: linear-gradient(135deg, #ff9900 0%, #ffb333 100%);
+            color: #000;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(255, 153, 0, 0.3);
+        }
+
+        .cta-primary:hover {
             transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 153, 0, 0.5);
         }
-        footer {
+
+        .cta-primary:active {
+            transform: translateY(-1px);
+        }
+
+        /* BENEFITS SECTION */
+        .benefits {
+            margin-bottom: 50px;
+        }
+
+        .benefits h2 {
+            font-size: 1.8em;
+            margin-bottom: 30px;
             text-align: center;
-            font-size: 0.7rem;
-            color: #444;
-            margin-top: 100px;
+            color: #ffffff;
+        }
+
+        .benefits-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .benefit-card {
+            background: rgba(255, 153, 0, 0.08);
+            border: 1px solid rgba(255, 153, 0, 0.2);
+            padding: 25px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            background: rgba(255, 153, 0, 0.12);
+            border-color: rgba(255, 153, 0, 0.4);
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            font-size: 2em;
+            margin-bottom: 12px;
+        }
+
+        .benefit-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #ff9900;
+            margin-bottom: 8px;
+        }
+
+        .benefit-description {
+            color: #b0b0b0;
+            line-height: 1.6;
+        }
+
+        /* WHAT YOU LEARN */
+        .what-learn {
+            background: linear-gradient(135deg, rgba(255, 153, 0, 0.1) 0%, rgba(255, 179, 51, 0.05) 100%);
+            padding: 35px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 153, 0, 0.2);
+        }
+
+        .what-learn h3 {
+            font-size: 1.5em;
+            margin-bottom: 25px;
+            color: #ffffff;
+        }
+
+        .learn-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .learn-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .learn-check {
+            color: #ff9900;
+            font-weight: 700;
+            font-size: 1.3em;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .learn-text {
+            color: #d0d0d0;
+        }
+
+        .learn-text strong {
+            color: #ff9900;
+        }
+
+        /* SOCIAL PROOF */
+        .social-proof {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            text-align: center;
+            border: 1px solid rgba(255, 153, 0, 0.15);
+        }
+
+        .social-proof h3 {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .proof-stat {
+            display: inline-block;
+            margin: 0 15px;
+            color: #d0d0d0;
+        }
+
+        .proof-stat .number {
+            display: block;
+            font-size: 2em;
+            font-weight: 700;
+            color: #ff9900;
+        }
+
+        .proof-stat .label {
+            font-size: 0.95em;
+            color: #b0b0b0;
+            margin-top: 5px;
+        }
+
+        /* URGENCY SECTION */
+        .urgency {
+            background: linear-gradient(135deg, rgba(255, 153, 0, 0.15) 0%, rgba(255, 179, 51, 0.08) 100%);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            border-left: 4px solid #ff9900;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .urgency-icon {
+            font-size: 2em;
+            flex-shrink: 0;
+            color: #ff9900;
+        }
+
+        .urgency-text {
+            color: #d0d0d0;
+            font-size: 0.95em;
+        }
+
+        .urgency-text strong {
+            color: #ff9900;
+        }
+
+        /* PURCHASE OPTIONS */
+        .purchase-options {
+            margin-bottom: 40px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 153, 0, 0.15);
+        }
+
+        .purchase-options h3 {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .option-divider {
+            text-align: center;
+            margin: 25px 0;
+            color: #777;
+            font-size: 0.9em;
+            text-transform: uppercase;
             letter-spacing: 1px;
         }
-        
+
+        .option-card {
+            background: rgba(255, 153, 0, 0.05);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 153, 0, 0.2);
+            margin-bottom: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .option-card:hover {
+            background: rgba(255, 153, 0, 0.1);
+            border-color: rgba(255, 153, 0, 0.4);
+        }
+
+        .option-title {
+            font-weight: 600;
+            color: #ff9900;
+            margin-bottom: 8px;
+        }
+
+        .option-price {
+            font-size: 1.1em;
+            color: #d0d0d0;
+            margin-bottom: 12px;
+        }
+
+        .option-description {
+            font-size: 0.9em;
+            color: #b0b0b0;
+            margin-bottom: 15px;
+        }
+
+        .cta-secondary {
+            background: rgba(255, 153, 0, 0.2);
+            color: #ff9900;
+            padding: 12px 25px;
+            border: 2px solid #ff9900;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-secondary:hover {
+            background: #ff9900;
+            color: #000;
+        }
+
+        /* TESTIMONIAL */
+        .testimonials {
+            margin-bottom: 40px;
+        }
+
+        .testimonials h3 {
+            font-size: 1.5em;
+            margin-bottom: 25px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 153, 0, 0.08);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #ff9900;
+            font-style: italic;
+            color: #d0d0d0;
+        }
+
+        .testimonial-author {
+            margin-top: 15px;
+            font-style: normal;
+            color: #ff9900;
+            font-weight: 600;
+        }
+
+        /* FAQ */
+        .faq {
+            margin-bottom: 40px;
+        }
+
+        .faq h3 {
+            font-size: 1.5em;
+            margin-bottom: 25px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .faq-item {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 153, 0, 0.15);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background: rgba(255, 153, 0, 0.08);
+            border-color: rgba(255, 153, 0, 0.3);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #ff9900;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            color: #b0b0b0;
+            display: none;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 153, 0, 0.2);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-toggle {
+            font-size: 1.3em;
+            color: #ff9900;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        /* FINAL CTA */
+        .final-cta {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 153, 0, 0.2);
+            margin-top: 40px;
+        }
+
+        .final-cta h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .final-cta p {
+            font-size: 1.05em;
+            color: #b0b0b0;
+            margin-bottom: 30px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid rgba(255, 153, 0, 0.2);
+            color: #888;
+            font-size: 0.9em;
+            margin-top: 40px;
+        }
+
+        .social-links {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: #ff9900;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 8px 15px;
+            border: 1px solid rgba(255, 153, 0, 0.3);
+            border-radius: 5px;
+        }
+
+        .social-links a:hover {
+            background: rgba(255, 153, 0, 0.2);
+            border-color: #ff9900;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.8em;
+            }
+
+            .hero .tagline {
+                font-size: 1em;
+            }
+
+            .proof-stat {
+                margin: 10px 10px;
+                font-size: 0.9em;
+            }
+
+            .urgency {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .learn-item {
+                gap: 10px;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <div class="logo">🚀 Be COOL Person</div>
+        </header>
 
-<div class="wrapper">
-    <span class="kicker">Be COOL Person</span>
-    <h1>Rumus Sederhana Untuk Hidup Lebih Tenang</h1>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1>Orang "Cool" Itu Bukan Yang Punya Uang</h1>
+            <p class="tagline">Temukan standar "COOL" yang sesungguhnya + 3 pertanyaan kehidupan yang mengubah segalanya</p>
+            <div class="hero-image">
+                <img src="cover.jpg" alt="Be Cool Person - Cover Buku" style="max-width: 300px; border-radius: 12px; box-shadow: 0 10px 40px rgba(255, 153, 0, 0.2);">
+            </div>
+        </section>
 
-    <div class="intro-italic">
-        "Hidupmu mungkin baik‑baik saja, tapi pernahkah kamu merasa capek dan hampa?"
+        <!-- PAIN POINT -->
+        <section class="pain-point">
+            <p>Kamu pernah lihat orang yang sepertinya <strong>"punya segalanya" tapi terlihat kosong?</strong></p>
+            <p>Atau sebaliknya—orang yang nggak punya apa-apa tapi terlihat <strong>tenang dan puas?</strong></p>
+            <p style="margin-bottom: 0;"><strong>Apa bedanya? Dan bagaimana cara menjadi yang kedua?</strong></p>
+        </section>
+
+        <!-- PRIMARY CTA -->
+        <button class="cta-primary" onclick="document.querySelector('.purchase-options').scrollIntoView({behavior: 'smooth'});">
+            ✨ Mulai Baca Sekarang
+        </button>
+
+        <!-- PROOF SECTION -->
+        <section style="margin-bottom: 50px; text-align: center; padding: 30px; background: rgba(255, 153, 0, 0.08); border-radius: 8px; border: 1px solid rgba(255, 153, 0, 0.2);">
+            <p style="color: #d0d0d0; font-size: 1.05em; line-height: 1.8;">
+                Buku ini selesai tahun <strong style="color: #ff9900;">2011</strong>. Karena satu dan lain hal, rilisnya tertunda. Meski begitu, takdir Tuhan selalu ada jalan. Pertemuan dengan mahasiswa yang meminta saran—saya share framework ini kepadanya—jadilah <strong style="color: #ff9900;">Yusep Maulana</strong>. Sekarang saatnya saya bagikan kepada dunia, karena terlalu pelit jika framework ini saya share hanya kepada orang sekitar saja. Rilis per <strong style="color: #ff9900;">2 Januari 2026</strong>.
+            </p>
+        </section>
+        <section class="benefits">
+            <h2>Apa Yang Kamu Pelajari?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔥</div>
+                    <div class="benefit-title">3 Pertanyaan Hidup</div>
+                    <div class="benefit-description">Pertanyaan yang membedakan orang yang hidup dengan purpose vs orang yang hidup "begitu saja"</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔥</div>
+                    <div class="benefit-title">Standar "Cool" Hakiki</div>
+                    <div class="benefit-description">Bukan yang dijual media. Tapi yang sesuai dengan agama dan fitrah manusia sebenarnya</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔥</div>
+                    <div class="benefit-title">Belajar Dari Kisah Nyata</div>
+                    <div class="benefit-description">Kenapa Oki & Bondan itu benar-benar cool. Dan kenapa Namrud & Qarun jatuh</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔥</div>
+                    <div class="benefit-title">Matematika Kehidupan</div>
+                    <div class="benefit-description">Ada formula, ada logika. Ini bukan motivasi kosong—ini adalah sistem</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔥</div>
+                    <div class="benefit-title">Hubungan Hati & Pikiran</div>
+                    <div class="benefit-description">Memahami konflik dalam diri dan bagaimana cara mengatasinya</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔥</div>
+                    <div class="benefit-title">Ilmu Terpenting</div>
+                    <div class="benefit-description">Pengetahuan yang sebenarnya penting untuk dunia dan akhirat</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT YOU LEARN -->
+        <section class="what-learn">
+            <h3>Isi Buku Ini Mencakup:</h3>
+            <div class="learn-list">
+                <div class="learn-item">
+                    <div class="learn-check">✓</div>
+                    <div class="learn-text"><strong>Kisah Oki Setiana Dewi, Bondan Prakoso, Theoderick & Yusep Maulana</strong> — apa yang membuat mereka truly cool (dan apa yang bisa kamu pelajari)</div>
+                </div>
+                <div class="learn-item">
+                    <div class="learn-check">✓</div>
+                    <div class="learn-text"><strong>Analisis Namrud, Qarun, Kurt Cobain, Chester Bennington</strong> — kenapa orang yang "punya semua" justru jatuh</div>
+                </div>
+                <div class="learn-item">
+                    <div class="learn-check">✓</div>
+                    <div class="learn-text"><strong>3 Pertanyaan Kehidupan</strong> yang sering ditanya tapi jarang dijawab dengan jujur</div>
+                </div>
+                <div class="learn-item">
+                    <div class="learn-check">✓</div>
+                    <div class="learn-text"><strong>Fondasi Agama</strong> tentang apa itu "maturity" dan "kematangan" yang sesungguhnya</div>
+                </div>
+                <div class="learn-item">
+                    <div class="learn-check">✓</div>
+                    <div class="learn-text"><strong>Cara Mengenali Diri Sendiri</strong> dan mengontrol apa yang benar-benar bisa kamu kontrol</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="testimonials">
+            <h3>Bukti Framework Bekerja</h3>
+            <div class="testimonial-card">
+                Yusep Maulana—mahasiswa yang mendapat framework ini—sekarang punya bisnis, berdaya untuk lingkungan, dan terus berkembang. Ini bukan cuma testimoni. Ini adalah proof bahwa framework ini works.
+                <div class="testimonial-author">— Hasil Nyata dari Framework</div>
+            </div>
+            <div class="testimonial-card" style="margin-top: 20px;">
+                "Kirim doa. Bokap lu tau seberapan bagus dan bermanfaatnya buku lu. Dan dia pasti bangga sama lu."
+                <div class="testimonial-author">— Pembaca dari Threads</div>
+            </div>
+        </section>
+
+        <!-- URGENCY -->
+        <section class="urgency">
+            <div class="urgency-icon">⚡</div>
+            <div class="urgency-text">
+                <strong>Edisi Digital Eksklusif</strong> dengan DRM lisensi khusus (atas nama pembeli). Jadi bukan cuma buku, tapi juga <strong>kepemilikan eksklusif.</strong>
+            </div>
+        </section>
+
+        <!-- PURCHASE OPTIONS -->
+        <section class="purchase-options">
+            <h3>Bagaimana Cara Membeli?</h3>
+
+            <div class="option-card">
+                <div class="option-title">📚 VERSI DIGITAL EKSKLUSIF</div>
+                <div class="option-description">Edisi khusus dengan lisensi atas nama Anda (tidak bisa dibajak)</div>
+                <div class="option-price">Hubungi Langsung</div>
+                <a href="https://wa.me/6281543333877?text=Saya%20ingin%20membeli%20buku%20Be%20Cool%20Person" class="cta-secondary" target="_blank">
+                    💬 Pesan via WhatsApp
+                </a>
+            </div>
+
+            <div class="option-divider">ATAU</div>
+
+            <div class="option-card">
+                <div class="option-title">📖 VERSI GOOGLE PLAY BOOKS</div>
+                <div class="option-description">Baca di aplikasi Google Play Books (tersedia di semua device)</div>
+                <div class="option-price">Harga Kompetitif</div>
+                <a href="https://play.google.com/store/books/details?id=cCGiEQAAQBAJ" class="cta-secondary" target="_blank">
+                    🔗 Baca di Google Play
+                </a>
+            </div>
+        </section>
+
+<!-- FAQ -->
+        <section class="faq">
+            <h3>Pertanyaan yang Sering Diajukan</h3>
+
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">
+                    Siapa yang sebaiknya membaca buku ini?
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Siapa saja yang merasa hidup ada yang "kurang," terutama orang muda dan orang tua yang ingin memahami nilai-nilai sebenarnya. Tidak perlu background agama khusus—buku ini ditulis untuk semua orang.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">
+                    Berapa lama waktu untuk selesai membaca?
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Tergantung kecepatan membaca, tapi rata-rata 3-5 jam. Buku ini dirancang untuk dibaca dengan penuh perhatian, bukan sekadar dilewat.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">
+                    Apa bedanya versi digital eksklusif vs Google Play?
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Versi eksklusif punya lisensi atas nama Anda—tidak bisa dibajak atau dibagikan. Ini lebih personal dan eksklusif. Google Play Books adalah versi standar yang lebih accessible.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">
+                    Apakah ada garansi kepuasan?
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Ya. Jika Anda merasa buku tidak sesuai dengan harapan, Anda bisa menghubungi kami untuk diskusi lebih lanjut. Kepuasan pembaca adalah prioritas kami.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">
+                    Bagaimana cara menghubungi penulis?
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Hubungi via WhatsApp untuk pertanyaan lebih lanjut atau diskusi langsung. Penulis aktif merespons dan membantu pembaca yang ingin berdiskusi lebih dalam tentang konten buku.
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final-cta">
+            <h2>Saatnya Temukan "Cool" Yang Sesungguhnya</h2>
+            <p>Jangan biarkan hidup tersesat dengan definisi "cool" yang salah. Ambil langkah pertama hari ini.</p>
+            <button class="cta-primary" onclick="document.querySelector('.purchase-options').scrollIntoView({behavior: 'smooth'});">
+                ✨ Pesan Sekarang
+            </button>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>© 2024 Be Cool Person. Semua hak cipta dilindungi.</p>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@YOUR_CHANNEL" target="_blank">📺 YouTube</a>
+                <a href="https://www.threads.net/@YOUR_HANDLE" target="_blank">💬 Threads</a>
+                <a href="https://www.facebook.com/YOUR_FANPAGE" target="_blank">👥 Facebook</a>
+                <a href="https://wa.me/6281543333877" target="_blank">📱 WhatsApp</a>
+            </div>
+            <p style="margin-top: 20px; color: #777;">
+                Pertanyaan? <a href="https://wa.me/6281543333877" style="color: #ff9900; text-decoration: none;">Hubungi kami via WhatsApp</a>
+            </p>
+        </footer>
     </div>
 
-    <p>Rasa ini sering muncul bukan karena hidup bermasalah, tapi karena kita belum benar‑benar mengenal diri sendiri..</p>
+    <script>
+        // Smooth scroll behavior untuk button CTA
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
 
-    <a href="https://wa.me/6281543333877" class="cta-btn">KENALI DIRIMU, KENDALI DITANGANMU</a>
-        
-    <p>Kebanyakan orang ngerasa capek hidup bukan karena hidupnya berat, tapi karena dia hidup tanpa arah yang jelas.</p>
-    <div class="cover-container">
-        <img src="cover.jpg" alt="Cover Buku Be COOL Person">
-    </div>
-    
-    <p>Buku <strong>be COOL Person</strong> bukan motivasi biasa:</p>
-    
-    <ul class="feature-list">
-        <li>🔥 <strong>Mengenal diri sendiri:</strong> Dengan 3 pertanyaan hidup yang sering kita hindari</li>
-        <li>🔥 <strong>Menemukan Standar 'COOL' Hakiki:</strong> Ketenangan yang nggak goyah oleh situasi.</li>
-        <li>🔥 <strong>Mempelajari Ilmu Terpenting:</strong> Akronim dari kata ISLAM, bukan ceramah tapi makna</li>
-    </ul>
-    
-    <a href="https://play.google.com/store/books/details?id=cCGiEQAAQBAJ" target="_blank" class="book-link" style="text-decoration: none; display: flex; align-items: center; justify-content: center; margin: 20px 0;">
-    <img src="google-books.png" alt="Beli di Google Play Books" class="book-icon" style="width: 43px !important; height: auto !important; margin-right: 10px;">
-    <span style="font-size: 20px !important; font-weight: bold; color: #ffffff;">Baca di Google Play Books</span>
-    </a>
-    
-    <a href="https://wa.me/6281543333877" class="cta-btn">DAPATKAN VERSI DIGITAL EKSKLUSIF SEKARANG</a>
-
-    <footer>
-        © 2026 BE COOL PERSON • SELF REFLECTION • JOURNEY • AWAKENING
-    </footer>
-</div>
-
+        // Track CTA clicks (optional - untuk analytics)
+        document.querySelectorAll('.cta-primary, .cta-secondary').forEach(btn => {
+            btn.addEventListener('click', function() {
+                console.log('CTA clicked:', this.textContent);
+            });
+        });
+    </script>
 </body>
 </html>
