@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be COOL Person - Rumus Sederhana Untuk Hidup Lebih Tenang</title>
+    <title>Be Cool Person - Rumus Sederhana Untuk Hidup Lebih Tenang</title>
     <style>
         * {
             margin: 0;
@@ -25,7 +25,7 @@
             padding: 20px;
         }
 
-        /* HEADER / NAVIGATION */
+        /* HEADER */
         header {
             padding: 20px 0;
             text-align: center;
@@ -45,7 +45,7 @@
         /* HERO SECTION */
         .hero {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
             animation: fadeIn 0.8s ease-in;
         }
 
@@ -61,7 +61,7 @@
         }
 
         .hero h1 {
-            font-size: 2.5em;
+            font-size: 2.2em;
             font-weight: 700;
             margin-bottom: 20px;
             line-height: 1.2;
@@ -70,32 +70,29 @@
         }
 
         .hero .tagline {
-            font-size: 1.1em;
+            font-size: 1em;
             color: #b0b0b0;
             margin-bottom: 30px;
             font-style: italic;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .hero-image {
             margin-bottom: 30px;
-            text-align: center;
         }
 
         .hero-image img {
-            max-width: 100%;
+            max-width: 250px;
             height: auto;
-            border-radius: 10px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(255, 153, 0, 0.2);
         }
 
-        /* PAIN POINT SECTION */
+        /* PAIN POINT */
         .pain-point {
             background: rgba(255, 153, 0, 0.05);
             border-left: 4px solid #ff9900;
             padding: 25px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             border-radius: 5px;
             backdrop-filter: blur(10px);
         }
@@ -103,21 +100,25 @@
         .pain-point p {
             font-size: 1.05em;
             color: #d0d0d0;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+        }
+
+        .pain-point p:last-child {
+            margin-bottom: 0;
         }
 
         .pain-point strong {
             color: #ff9900;
         }
 
-        /* PRIMARY CTA */
+        /* CTA PRIMARY */
         .cta-primary {
             background: linear-gradient(135deg, #ff9900 0%, #ffb333 100%);
             color: #000;
-            padding: 18px 40px;
+            padding: 16px 40px;
             border: none;
             border-radius: 8px;
-            font-size: 1.1em;
+            font-size: 1em;
             font-weight: 700;
             cursor: pointer;
             text-transform: uppercase;
@@ -133,31 +134,27 @@
             box-shadow: 0 12px 30px rgba(255, 153, 0, 0.5);
         }
 
-        .cta-primary:active {
-            transform: translateY(-1px);
-        }
-
-        /* BENEFITS SECTION */
+        /* BENEFITS */
         .benefits {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .benefits h2 {
-            font-size: 1.8em;
-            margin-bottom: 30px;
+            font-size: 1.6em;
+            margin-bottom: 20px;
             text-align: center;
             color: #ffffff;
         }
 
         .benefits-grid {
             display: grid;
-            gap: 20px;
+            gap: 15px;
         }
 
         .benefit-card {
             background: rgba(255, 153, 0, 0.08);
             border: 1px solid rgba(255, 153, 0, 0.2);
-            padding: 25px;
+            padding: 20px;
             border-radius: 8px;
             transition: all 0.3s ease;
         }
@@ -165,105 +162,65 @@
         .benefit-card:hover {
             background: rgba(255, 153, 0, 0.12);
             border-color: rgba(255, 153, 0, 0.4);
-            transform: translateY(-5px);
-        }
-
-        .benefit-icon {
-            font-size: 2em;
-            margin-bottom: 12px;
+            transform: translateY(-3px);
         }
 
         .benefit-title {
-            font-size: 1.2em;
+            font-size: 1.05em;
             font-weight: 600;
             color: #ff9900;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .benefit-description {
             color: #b0b0b0;
-            line-height: 1.6;
+            font-size: 0.95em;
+            line-height: 1.5;
         }
 
-        /* WHAT YOU LEARN */
-        .what-learn {
-            background: linear-gradient(135deg, rgba(255, 153, 0, 0.1) 0%, rgba(255, 179, 51, 0.05) 100%);
-            padding: 35px;
-            border-radius: 10px;
+        /* PROOF SECTION */
+        .proof-section {
+            background: rgba(255, 153, 0, 0.08);
+            padding: 30px;
+            border-radius: 8px;
             margin-bottom: 40px;
             border: 1px solid rgba(255, 153, 0, 0.2);
         }
 
-        .what-learn h3 {
-            font-size: 1.5em;
-            margin-bottom: 25px;
-            color: #ffffff;
-        }
-
-        .learn-list {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .learn-item {
-            display: flex;
-            gap: 15px;
-            align-items: flex-start;
-        }
-
-        .learn-check {
-            color: #ff9900;
-            font-weight: 700;
-            font-size: 1.3em;
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        .learn-text {
-            color: #d0d0d0;
-        }
-
-        .learn-text strong {
-            color: #ff9900;
-        }
-
-        /* SOCIAL PROOF */
-        .social-proof {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 30px;
-            border-radius: 8px;
-            margin-bottom: 40px;
-            text-align: center;
-            border: 1px solid rgba(255, 153, 0, 0.15);
-        }
-
-        .social-proof h3 {
-            font-size: 1.3em;
+        .proof-section h3 {
+            font-size: 1.4em;
             margin-bottom: 20px;
+            text-align: center;
             color: #ffffff;
         }
 
-        .proof-stat {
-            display: inline-block;
-            margin: 0 15px;
+        .proof-statement {
             color: #d0d0d0;
-        }
-
-        .proof-stat .number {
-            display: block;
-            font-size: 2em;
-            font-weight: 700;
-            color: #ff9900;
-        }
-
-        .proof-stat .label {
             font-size: 0.95em;
-            color: #b0b0b0;
-            margin-top: 5px;
+            line-height: 1.7;
+            margin-bottom: 20px;
         }
 
-        /* URGENCY SECTION */
+        .proof-testimonial {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-left: 3px solid #ff9900;
+            border-radius: 5px;
+            font-style: italic;
+            color: #d0d0d0;
+            margin-bottom: 12px;
+            font-size: 0.95em;
+        }
+
+        .proof-author {
+            color: #ff9900;
+            font-weight: 600;
+            font-style: normal;
+            margin-left: 15px;
+            font-size: 0.9em;
+        }
+
+        /* URGENCY */
         .urgency {
             background: linear-gradient(135deg, rgba(255, 153, 0, 0.15) 0%, rgba(255, 179, 51, 0.08) 100%);
             padding: 25px;
@@ -276,7 +233,7 @@
         }
 
         .urgency-icon {
-            font-size: 2em;
+            font-size: 1.8em;
             flex-shrink: 0;
             color: #ff9900;
         }
@@ -290,62 +247,50 @@
             color: #ff9900;
         }
 
-        /* PURCHASE OPTIONS */
-        .purchase-options {
+        /* PURCHASE SECTION */
+        .purchase-section {
             margin-bottom: 40px;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 30px;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 153, 0, 0.15);
         }
 
-        .purchase-options h3 {
-            font-size: 1.3em;
-            margin-bottom: 20px;
+        .purchase-section h3 {
+            font-size: 1.4em;
+            margin-bottom: 25px;
             text-align: center;
             color: #ffffff;
         }
 
-        .option-divider {
-            text-align: center;
-            margin: 25px 0;
-            color: #777;
-            font-size: 0.9em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .purchase-grid {
+            display: grid;
+            gap: 15px;
         }
 
-        .option-card {
-            background: rgba(255, 153, 0, 0.05);
-            padding: 20px;
+        .purchase-card {
+            background: rgba(255, 153, 0, 0.08);
+            padding: 25px;
             border-radius: 8px;
             border: 1px solid rgba(255, 153, 0, 0.2);
-            margin-bottom: 15px;
             text-align: center;
             transition: all 0.3s ease;
         }
 
-        .option-card:hover {
-            background: rgba(255, 153, 0, 0.1);
+        .purchase-card:hover {
+            background: rgba(255, 153, 0, 0.12);
             border-color: rgba(255, 153, 0, 0.4);
+            transform: translateY(-3px);
         }
 
-        .option-title {
+        .purchase-title {
             font-weight: 600;
             color: #ff9900;
-            margin-bottom: 8px;
-        }
-
-        .option-price {
+            margin-bottom: 10px;
             font-size: 1.1em;
-            color: #d0d0d0;
-            margin-bottom: 12px;
         }
 
-        .option-description {
+        .purchase-description {
             font-size: 0.9em;
             color: #b0b0b0;
             margin-bottom: 15px;
+            line-height: 1.5;
         }
 
         .cta-secondary {
@@ -369,51 +314,22 @@
             color: #000;
         }
 
-        /* TESTIMONIAL */
-        .testimonials {
-            margin-bottom: 40px;
-        }
-
-        .testimonials h3 {
-            font-size: 1.5em;
-            margin-bottom: 25px;
-            text-align: center;
-            color: #ffffff;
-        }
-
-        .testimonial-card {
-            background: rgba(255, 153, 0, 0.08);
-            padding: 25px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            border-left: 4px solid #ff9900;
-            font-style: italic;
-            color: #d0d0d0;
-        }
-
-        .testimonial-author {
-            margin-top: 15px;
-            font-style: normal;
-            color: #ff9900;
-            font-weight: 600;
-        }
-
         /* FAQ */
-        .faq {
+        .faq-section {
             margin-bottom: 40px;
         }
 
-        .faq h3 {
-            font-size: 1.5em;
-            margin-bottom: 25px;
+        .faq-section h3 {
+            font-size: 1.4em;
+            margin-bottom: 20px;
             text-align: center;
             color: #ffffff;
         }
 
         .faq-item {
             background: rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            margin-bottom: 15px;
+            padding: 18px;
+            margin-bottom: 12px;
             border-radius: 8px;
             border: 1px solid rgba(255, 153, 0, 0.15);
             cursor: pointer;
@@ -432,6 +348,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            font-size: 0.95em;
         }
 
         .faq-answer {
@@ -440,6 +357,8 @@
             margin-top: 10px;
             padding-top: 10px;
             border-top: 1px solid rgba(255, 153, 0, 0.2);
+            font-size: 0.9em;
+            line-height: 1.6;
         }
 
         .faq-item.active .faq-answer {
@@ -447,80 +366,27 @@
         }
 
         .faq-toggle {
-            font-size: 1.3em;
+            font-size: 1.1em;
             color: #ff9900;
+            transition: transform 0.3s ease;
         }
 
         .faq-item.active .faq-toggle {
             transform: rotate(180deg);
         }
 
-        /* FINAL CTA */
-        .final-cta {
-            text-align: center;
-            padding: 40px 0;
-            border-top: 1px solid rgba(255, 153, 0, 0.2);
-            margin-top: 40px;
-        }
-
-        .final-cta h2 {
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
-
-        .final-cta p {
-            font-size: 1.05em;
-            color: #b0b0b0;
-            margin-bottom: 30px;
-        }
-
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 30px 0;
-            border-top: 1px solid rgba(255, 153, 0, 0.2);
-            color: #888;
-            font-size: 0.9em;
-            margin-top: 40px;
-        }
-
-        .social-links {
-            margin: 20px 0;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .social-links a {
-            color: #ff9900;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            padding: 8px 15px;
-            border: 1px solid rgba(255, 153, 0, 0.3);
-            border-radius: 5px;
-        }
-
-        .social-links a:hover {
-            background: rgba(255, 153, 0, 0.2);
-            border-color: #ff9900;
-        }
-
         /* RESPONSIVE */
         @media (max-width: 600px) {
             .hero h1 {
-                font-size: 1.8em;
+                font-size: 1.7em;
             }
 
             .hero .tagline {
-                font-size: 1em;
+                font-size: 0.95em;
             }
 
-            .proof-stat {
-                margin: 10px 10px;
-                font-size: 0.9em;
+            .hero-image img {
+                max-width: 200px;
             }
 
             .urgency {
@@ -528,123 +394,79 @@
                 text-align: center;
             }
 
-            .learn-item {
-                gap: 10px;
+            .cta-primary {
+                padding: 14px 30px;
+                font-size: 0.95em;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- HEADER -->
+        <!-- SECTION 1: HERO -->
         <header>
-            <div class="logo">🚀 Be COOL Person</div>
+            <div class="logo">🚀 Be Cool Person</div>
         </header>
 
-        <!-- HERO SECTION -->
         <section class="hero">
             <h1>Orang "Cool" Itu Bukan Yang Punya Uang</h1>
-            <p class="tagline">Temukan standar "COOL" yang sesungguhnya + 3 pertanyaan kehidupan yang mengubah segalanya</p>
+            <p class="tagline">Temukan standar "cool" yang sesungguhnya + 3 pertanyaan kehidupan yang mengubah segalanya</p>
             <div class="hero-image">
-                <img src="cover.jpg" alt="Be Cool Person - Cover Buku" style="max-width: 300px; border-radius: 12px; box-shadow: 0 10px 40px rgba(255, 153, 0, 0.2);">
+                <img src="cover.jpg" alt="Be Cool Person - Cover Buku">
             </div>
         </section>
 
-        <!-- PAIN POINT -->
+        <!-- SECTION 2: PAIN POINT + CTA -->
         <section class="pain-point">
             <p>Kamu pernah lihat orang yang sepertinya <strong>"punya segalanya" tapi terlihat kosong?</strong></p>
             <p>Atau sebaliknya—orang yang nggak punya apa-apa tapi terlihat <strong>tenang dan puas?</strong></p>
-            <p style="margin-bottom: 0;"><strong>Apa bedanya? Dan bagaimana cara menjadi yang kedua?</strong></p>
+            <p style="margin-top: 15px;"><strong>Apa bedanya? Dan bagaimana cara menjadi yang kedua?</strong></p>
         </section>
 
-        <!-- PRIMARY CTA -->
-        <button class="cta-primary" onclick="document.querySelector('.purchase-options').scrollIntoView({behavior: 'smooth'});">
+        <button class="cta-primary" onclick="document.querySelector('.purchase-section').scrollIntoView({behavior: 'smooth'});">
             ✨ Mulai Baca Sekarang
         </button>
 
-        <!-- PROOF SECTION -->
-        <section style="margin-bottom: 50px; text-align: center; padding: 30px; background: rgba(255, 153, 0, 0.08); border-radius: 8px; border: 1px solid rgba(255, 153, 0, 0.2);">
-            <p style="color: #d0d0d0; font-size: 1.05em; line-height: 1.8;">
-                Buku ini selesai tahun <strong style="color: #ff9900;">2011</strong>. Karena satu dan lain hal, rilisnya tertunda. Meski begitu, takdir Tuhan selalu ada jalan. Pertemuan dengan mahasiswa yang meminta saran—saya share framework ini kepadanya—jadilah <strong style="color: #ff9900;">Yusep Maulana</strong>. Sekarang saatnya saya bagikan kepada dunia, karena terlalu pelit jika framework ini saya share hanya kepada orang sekitar saja. Rilis per <strong style="color: #ff9900;">2 Januari 2026</strong>.
-            </p>
-        </section>
+        <!-- SECTION 3: BENEFITS (CONDENSED) -->
         <section class="benefits">
             <h2>Apa Yang Kamu Pelajari?</h2>
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <div class="benefit-icon">🔥</div>
-                    <div class="benefit-title">3 Pertanyaan Hidup</div>
+                    <div class="benefit-title">🔥 3 Pertanyaan Hidup</div>
                     <div class="benefit-description">Pertanyaan yang membedakan orang yang hidup dengan purpose vs orang yang hidup "begitu saja"</div>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">🔥</div>
-                    <div class="benefit-title">Standar "Cool" Hakiki</div>
+                    <div class="benefit-title">🔥 Standar "Cool" Hakiki</div>
                     <div class="benefit-description">Bukan yang dijual media. Tapi yang sesuai dengan agama dan fitrah manusia sebenarnya</div>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">🔥</div>
-                    <div class="benefit-title">Belajar Dari Kisah Nyata</div>
-                    <div class="benefit-description">Kenapa Oki & Bondan itu benar-benar cool. Dan kenapa Namrud & Qarun jatuh</div>
+                    <div class="benefit-title">🔥 Belajar Dari Kisah Nyata</div>
+                    <div class="benefit-description">Kenapa Oki & Bondan cool. Kenapa Namrud & Qarun jatuh. Dan apa yang bisa kamu pelajari</div>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">🔥</div>
-                    <div class="benefit-title">Matematika Kehidupan</div>
-                    <div class="benefit-description">Ada formula, ada logika. Ini bukan motivasi kosong—ini adalah sistem</div>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🔥</div>
-                    <div class="benefit-title">Hubungan Hati & Pikiran</div>
-                    <div class="benefit-description">Memahami konflik dalam diri dan bagaimana cara mengatasinya</div>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🔥</div>
-                    <div class="benefit-title">Ilmu Terpenting</div>
-                    <div class="benefit-description">Pengetahuan yang sebenarnya penting untuk dunia dan akhirat</div>
+                    <div class="benefit-title">🔥 Matematika & Ilmu Terpenting</div>
+                    <div class="benefit-description">Ada formula, ada logika. Hubungan hati & pikiran. Pengetahuan untuk dunia dan akhirat</div>
                 </div>
             </div>
         </section>
 
-        <!-- WHAT YOU LEARN -->
-        <section class="what-learn">
-            <h3>Isi Buku Ini Mencakup:</h3>
-            <div class="learn-list">
-                <div class="learn-item">
-                    <div class="learn-check">✓</div>
-                    <div class="learn-text"><strong>Kisah Oki Setiana Dewi, Bondan Prakoso, Theoderick & Yusep Maulana</strong> — apa yang membuat mereka truly cool (dan apa yang bisa kamu pelajari)</div>
-                </div>
-                <div class="learn-item">
-                    <div class="learn-check">✓</div>
-                    <div class="learn-text"><strong>Analisis Namrud, Qarun, Kurt Cobain, Chester Bennington</strong> — kenapa orang yang "punya semua" justru jatuh</div>
-                </div>
-                <div class="learn-item">
-                    <div class="learn-check">✓</div>
-                    <div class="learn-text"><strong>3 Pertanyaan Kehidupan</strong> yang sering ditanya tapi jarang dijawab dengan jujur</div>
-                </div>
-                <div class="learn-item">
-                    <div class="learn-check">✓</div>
-                    <div class="learn-text"><strong>Fondasi Agama</strong> tentang apa itu "maturity" dan "kematangan" yang sesungguhnya</div>
-                </div>
-                <div class="learn-item">
-                    <div class="learn-check">✓</div>
-                    <div class="learn-text"><strong>Cara Mengenali Diri Sendiri</strong> dan mengontrol apa yang benar-benar bisa kamu kontrol</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- TESTIMONIALS -->
-        <section class="testimonials">
+        <!-- SECTION 4: PROOF -->
+        <section class="proof-section">
             <h3>Bukti Framework Bekerja</h3>
-            <div class="testimonial-card">
-                Yusep Maulana—mahasiswa yang mendapat framework ini—sekarang punya bisnis, berdaya untuk lingkungan, dan terus berkembang. Ini bukan cuma testimoni. Ini adalah proof bahwa framework ini works.
-                <div class="testimonial-author">— Hasil Nyata dari Framework</div>
+            <div class="proof-statement">
+                Buku ini selesai tahun <strong>2011</strong>. Karena satu dan lain hal, rilisnya tertunda. Meski begitu, takdir Tuhan selalu ada jalan. Pertemuan dengan mahasiswa yang meminta saran—saya share framework ini kepadanya—jadilah <strong>Yusep Maulana</strong>. Sekarang saatnya saya bagikan kepada dunia, karena terlalu pelit jika framework ini saya share hanya kepada orang sekitar saja. Rilis per <strong>2 Januari 2026</strong>.
             </div>
-            <div class="testimonial-card" style="margin-top: 20px;">
+            <div class="proof-testimonial">
+                Yusep Maulana—mahasiswa yang mendapat framework ini—sekarang punya bisnis, berdaya untuk lingkungan, dan terus berkembang. Ini adalah proof bahwa framework ini works.
+                <div class="proof-author">— Hasil Nyata dari Framework</div>
+            </div>
+            <div class="proof-testimonial">
                 "Kirim doa. Bokap lu tau seberapan bagus dan bermanfaatnya buku lu. Dan dia pasti bangga sama lu."
-                <div class="testimonial-author">— Pembaca dari Threads</div>
+                <div class="proof-author">— Pembaca dari Threads</div>
             </div>
         </section>
 
-        <!-- URGENCY -->
+        <!-- SECTION 5: URGENCY -->
         <section class="urgency">
             <div class="urgency-icon">⚡</div>
             <div class="urgency-text">
@@ -652,35 +474,30 @@
             </div>
         </section>
 
-        <!-- PURCHASE OPTIONS -->
-        <section class="purchase-options">
+        <!-- SECTION 6: PURCHASE OPTIONS -->
+        <section class="purchase-section">
             <h3>Bagaimana Cara Membeli?</h3>
-
-            <div class="option-card">
-                <div class="option-title">📚 VERSI DIGITAL EKSKLUSIF</div>
-                <div class="option-description">Edisi khusus dengan lisensi atas nama Anda (tidak bisa dibajak)</div>
-                <div class="option-price">Hubungi Langsung</div>
-                <a href="https://wa.me/6281543333877?text=Saya%20ingin%20membeli%20buku%20Be%20Cool%20Person" class="cta-secondary" target="_blank">
-                    💬 Pesan via WhatsApp
-                </a>
-            </div>
-
-            <div class="option-divider">ATAU</div>
-
-            <div class="option-card">
-                <div class="option-title">📖 VERSI GOOGLE PLAY BOOKS</div>
-                <div class="option-description">Baca di aplikasi Google Play Books (tersedia di semua device)</div>
-                <div class="option-price">Harga Kompetitif</div>
-                <a href="https://play.google.com/store/books/details?id=cCGiEQAAQBAJ" class="cta-secondary" target="_blank">
-                    🔗 Baca di Google Play
-                </a>
+            <div class="purchase-grid">
+                <div class="purchase-card">
+                    <div class="purchase-title">📱 VERSI DIGITAL EKSKLUSIF</div>
+                    <div class="purchase-description">Edisi khusus dengan lisensi atas nama Anda (tidak bisa dibajak)</div>
+                    <a href="https://wa.me/6281543333877?text=Saya%20ingin%20membeli%20buku%20Be%20Cool%20Person" class="cta-secondary" target="_blank">
+                        💬 Pesan via WhatsApp
+                    </a>
+                </div>
+                <div class="purchase-card">
+                    <div class="purchase-title">📖 GOOGLE PLAY BOOKS</div>
+                    <div class="purchase-description">Baca di aplikasi Google Play Books (tersedia di semua device)</div>
+                    <a href="https://play.google.com/store/books/details?id=cCGiEQAAQBAJ" class="cta-secondary" target="_blank">
+                        🔗 Baca di Google Play
+                    </a>
+                </div>
             </div>
         </section>
 
-<!-- FAQ -->
-        <section class="faq">
-            <h3>Pertanyaan yang Sering Diajukan</h3>
-
+        <!-- SECTION 7: FAQ MINIMAL -->
+        <section class="faq-section">
+            <h3>Pertanyaan Umum</h3>
             <div class="faq-item" onclick="this.classList.toggle('active')">
                 <div class="faq-question">
                     Siapa yang sebaiknya membaca buku ini?
@@ -688,16 +505,6 @@
                 </div>
                 <div class="faq-answer">
                     Siapa saja yang merasa hidup ada yang "kurang," terutama orang muda dan orang tua yang ingin memahami nilai-nilai sebenarnya. Tidak perlu background agama khusus—buku ini ditulis untuk semua orang.
-                </div>
-            </div>
-
-            <div class="faq-item" onclick="this.classList.toggle('active')">
-                <div class="faq-question">
-                    Berapa lama waktu untuk selesai membaca?
-                    <span class="faq-toggle">▼</span>
-                </div>
-                <div class="faq-answer">
-                    Tergantung kecepatan membaca, tapi rata-rata 3-5 jam. Buku ini dirancang untuk dibaca dengan penuh perhatian, bukan sekadar dilewat.
                 </div>
             </div>
 
@@ -713,16 +520,6 @@
 
             <div class="faq-item" onclick="this.classList.toggle('active')">
                 <div class="faq-question">
-                    Apakah ada garansi kepuasan?
-                    <span class="faq-toggle">▼</span>
-                </div>
-                <div class="faq-answer">
-                    Ya. Jika Anda merasa buku tidak sesuai dengan harapan, Anda bisa menghubungi kami untuk diskusi lebih lanjut. Kepuasan pembaca adalah prioritas kami.
-                </div>
-            </div>
-
-            <div class="faq-item" onclick="this.classList.toggle('active')">
-                <div class="faq-question">
                     Bagaimana cara menghubungi penulis?
                     <span class="faq-toggle">▼</span>
                 </div>
@@ -731,49 +528,17 @@
                 </div>
             </div>
         </section>
-
-        <!-- FINAL CTA -->
-        <section class="final-cta">
-            <h2>Saatnya Temukan "Cool" Yang Sesungguhnya</h2>
-            <p>Jangan biarkan hidup tersesat dengan definisi "cool" yang salah. Ambil langkah pertama hari ini.</p>
-            <button class="cta-primary" onclick="document.querySelector('.purchase-options').scrollIntoView({behavior: 'smooth'});">
-                ✨ Pesan Sekarang
-            </button>
-        </section>
-
-        <!-- FOOTER -->
-        <footer>
-            <p>© 2024 Be Cool Person. Semua hak cipta dilindungi.</p>
-            <div class="social-links">
-                <a href="https://www.youtube.com/@YOUR_CHANNEL" target="_blank">📺 YouTube</a>
-                <a href="https://www.threads.net/@YOUR_HANDLE" target="_blank">💬 Threads</a>
-                <a href="https://www.facebook.com/YOUR_FANPAGE" target="_blank">👥 Facebook</a>
-                <a href="https://wa.me/6281543333877" target="_blank">📱 WhatsApp</a>
-            </div>
-            <p style="margin-top: 20px; color: #777;">
-                Pertanyaan? <a href="https://wa.me/6281543333877" style="color: #ff9900; text-decoration: none;">Hubungi kami via WhatsApp</a>
-            </p>
-        </footer>
     </div>
 
     <script>
-        // Smooth scroll behavior untuk button CTA
+        // Smooth scroll untuk buttons
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                    target.scrollIntoView({behavior: 'smooth'});
                 }
-            });
-        });
-
-        // Track CTA clicks (optional - untuk analytics)
-        document.querySelectorAll('.cta-primary, .cta-secondary').forEach(btn => {
-            btn.addEventListener('click', function() {
-                console.log('CTA clicked:', this.textContent);
             });
         });
     </script>
